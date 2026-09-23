@@ -1,0 +1,187 @@
+:root {
+  --page-background: #f3f0e8;
+  --ink: #1c1917;
+  --muted: #6b6560;
+  --card: #fffcf7;
+  --line: #e4ddd2;
+  --accent: #1f6b4a;
+  --accent-ink: #fffcf7;
+  --field: #ffffff;
+  color: var(--ink);
+  background: var(--page-background);
+  font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', Palatino, serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--page-background);
+  color: var(--ink);
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+.converterPage {
+  width: min(720px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0 64px;
+}
+
+.converterHeader h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.converterEyebrow,
+.converterLead,
+.resultHint,
+.sourceFieldLabel {
+  color: var(--muted);
+}
+
+.converterEyebrow {
+  margin: 0 0 8px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.converterLead {
+  margin: 12px 0 0;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.sourceField {
+  display: block;
+  margin-top: 32px;
+}
+
+.sourceFieldLabel,
+.resultCard h2 {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sourceFieldLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sourceTextarea {
+  width: 100%;
+  resize: vertical;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--field);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.sourceTextarea:focus {
+  outline: 2px solid var(--accent);
+  border-color: transparent;
+}
+
+.sourceActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tryExampleButton,
+.clearSourceButton,
+.copyResultButton {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+  padding: 8px 14px;
+  cursor: pointer;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+}
+
+.tryExampleButton {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.copyResultButton:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.resultList {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.resultCard {
+  padding: 16px 18px 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+}
+
+.resultCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.resultCard h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.resultHint {
+  margin: 6px 0 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+}
+
+.resultText {
+  margin: 14px 0 0;
+  font-size: 20px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.resultTextEmpty {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  .converterPage {
+    padding-top: 28px;
+  }
+
+  .converterHeader h1 {
+    font-size: 32px;
+  }
+
+  .resultText {
+    font-size: 18px;
+  }
+}
