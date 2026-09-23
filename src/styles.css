@@ -164,6 +164,7 @@ textarea {
   margin: 14px 0 0;
   font-size: 20px;
   line-height: 1.4;
+  white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
 
